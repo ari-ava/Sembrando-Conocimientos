@@ -3,89 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Misión y Visión</title>
+  <title>Plataforma Educativa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/mision.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow" style="background: linear-gradient(90deg, #4f46e5, #7c3aed);">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width="40" height="40" class="rounded-circle me-2">
-        Sembrando Conocimientos
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">EduPlataforma</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="/assets/html/inicio.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/assets/html/quienes-somos.html">Quienes somos</a></li>
-          <li class="nav-item"><a class="nav-link" href="/assets/html/mision.html">Misión y visión</a></li>
-          <li class="nav-item"><a class="nav-link" href="/assets/html/formulario.html">Contacto</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mision">Misión y Visión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#foro">Foro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  <section class="hero" id="inicio">
+    <img class="imagen" src="https://i.pinimg.com/736x/8b/db/5d/8bdb5dfcf9eeb7e78af5a7b9fd01cf71.jpg" alt="libros">
+  <div class="container">
+    <h1>Bienvenido a EduPlataforma</h1>
+    <p>Aprende, comparte y crece con nosotros. Educación accesible para todos.</p>
+  </div>
+</section>
 
-  <section class="text-center text-white py-5 header-section">
-    <div class="container">
-    <h3 class="text-center vision-title">Nuestra Visión</h3>
-      <p class="lead mt-3">
-        Definimos el futuro de la educación con tecnología que realmente entiende las 
-        necesidades de cada estudiante.
-      </p>
-    </div>
-  </section>
 
-  <section class="container py-5">
+  <section id="mision" class="container py-5">
+    <h2 class="section-title">Nuestra Misión y Visión</h2>
     <div class="row g-4">
+
       <div class="col-md-6">
-        <div class="card shadow-lg border-0 h-100 p-4 mission-card">
-          <div class="icon-box mx-auto mb-3">
-            <i class="bi bi-bullseye"></i>
-          </div>
-          <h3 class="text-center mission-title">Nuestra Misión</h3>
-          <p class="text-muted mt-3">
-            Empoderar a estudiantes de todo el mundo con herramientas inteligentes y personalizadas
-            que transforman su experiencia de aprendizaje, ayudándoles a desarrollar hábitos de estudio
-            efectivos, mantener la motivación y alcanzar su máximo potencial académico de manera sostenible
-            y equilibrada.
+        <div class="card p-4 text-center">
+          <i class="bi bi-bullseye"></i>
+          <h3 class="fw-bold mission-title">Nuestra Misión</h3>
+          <p>
+            Empoderar a los estudiantes a través de tecnología educativa accesible, 
+            fomentando el aprendizaje autónomo, la motivación y el desarrollo integral 
+            para alcanzar su máximo potencial académico.
           </p>
-          <ul class="list-unstyled mt-3">
-            <li><i class="bi bi-check-circle-fill text-primary"></i> Personalización inteligente del aprendizaje</li>
-            <li><i class="bi bi-check-circle-fill text-primary"></i> Optimización del tiempo de estudio</li>
-            <li><i class="bi bi-check-circle-fill text-primary"></i> Desarrollo de hábitos sostenibles</li>
-            <li><i class="bi bi-check-circle-fill text-primary"></i> Motivación y bienestar estudiantil</li>
-          </ul>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="card shadow-lg border-0 h-100 p-4 vision-card">
-          <div class="icon-box mx-auto mb-3">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <h3 class="text-center fw-bold text-primary">Nuestra Visión</h3>
-          <p class="text-muted mt-3">
-            Ser la plataforma educativa líder a nivel global que redefine la forma en que los estudiantes aprenden,
-            convirtiéndonos en el compañero inteligente indispensable para millones de estudiantes que buscan
-            excelencia académica sin sacrificar su bienestar personal.
+        <div class="card p-4 text-center">
+          <i class="bi bi-eye"></i>
+          <h3 class="fw-bold vision-title">Nuestra Visión</h3>
+          <p>
+            Ser la plataforma líder en educación digital en Latinoamérica, creando 
+            una comunidad global de aprendizaje colaborativo que inspire innovación 
+            y mejore la calidad educativa.
           </p>
-          <h6 class="fw-bold text-secondary mt-3">Hacia 2030 queremos:</h6>
-          <ul class="list-unstyled mt-2">
-            <li><i class="bi bi-star-fill text-warning"></i> Impactar positivamente la vida de 10 millones de estudiantes</li>
-            <li><i class="bi bi-globe text-info"></i> Estar presentes en 50 países y 20 idiomas</li>
-            <li><i class="bi bi-graph-down-arrow text-danger"></i> Reducir en un 40% el estrés académico promedio</li>
-            <li><i class="bi bi-bar-chart-line-fill text-success"></i> Mejorar en un 35% la retención y rendimiento estudiantil</li>
-            <li><i class="bi bi-people-fill text-primary"></i> Crear la mayor comunidad de aprendizaje colaborativo del mundo</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 EduPlataforma - Todos los derechos reservados</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
