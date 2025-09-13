@@ -1,1 +1,39 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f7fc;
+}
 
+.navbar {
+  background: linear-gradient(90deg, #6d28d9, #9333ea);
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #ffd700;
+}
+
+.section-title {
+  text-align: center;
+  margin: 4rem 0 2rem;
+  font-weight: bold;
+  color: #6d28d9;
+}
+
+.mission-title {
+  color: #6d28d9;
+}
+.vision-title {
+  color: #9333ea;
+}
+
+footer {
+  background: #6d28d9;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
