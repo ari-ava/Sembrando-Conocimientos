@@ -1,0 +1,133 @@
+/* =======================
+   ESTILOS GENERALES
+======================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff6fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #ffb6d5, #ff69b4);
+    border-bottom: 3px solid #ff4d94;
+}
+header h1 {
+    font-weight: bold;
+    color: #a0005a;
+}
+header p {
+    max-width: 800px;
+    margin: auto;
+    color: #7a0044;
+}
+
+/* Sección Objetivos */
+section ul.list-group li {
+    background-color: #ffe6f2;
+    border: none;
+    padding: 12px;
+    font-size: 1.05rem;
+    border-left: 4px solid #ff69b4;
+}
+section h2 {
+    color: #a0005a;
+    font-weight: bold;
+}
+
+/* =======================
+   TARJETAS FUNDADORAS
+======================= */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    width: 260px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+}
+
+.box h3 {
+    color: #a0005a;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.box p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.box .imagen {
+    background-color: #ffb6d5;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Botón */
+.boton {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+.boton:hover {
+    background-color: #d94d96;
+}
+
+/* =======================
+   FORMULARIO DE CONTACTO
+======================= */
+section.bg-light {
+    background-color: #ffe6f2 !important;
+}
+
+form label {
+    font-weight: 500;
+    color: #7a0044;
+}
+
+form .form-control {
+    border-radius: 10px;
+    border: 1px solid #ffb6d5;
+}
+
+form button {
+    background-color: #ff69b4;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #d94d96;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    font-size: 0.9rem;}
+
+img {
+    background-image: url("assets/css/logo/logito/ChatGPT Image 15 ago 2025, 08_12_21 p.m..png");
+    background:content-box;
+    background-repeat: no-repeat;
+    height: 400px;
+    width:  400px;
+    color: #ff69b4;
+}
