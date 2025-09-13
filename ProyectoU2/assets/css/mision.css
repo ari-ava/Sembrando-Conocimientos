@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misión y Visión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header con menú -->
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo">
+      <span>Sembrando Conocimientos</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./assets/html/">Inicio</a></li>
+        <li><a href="#">Quienes somos</a></li>
+        <li><a href="#">Misión y visión</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>NUESTRA MISIÓN</h1>
+      <p>
+        Brindar herramientas y materiales accesibles, confiables y gratuitos que ayuden a los
+        estudiantes a desarrollar su máximo potencial académico.
+      </p>
+    </section>
+
+    <section class="content">
+      <div class="box" onclick="toggleBox(this)">
+        <h2>Nuestra Misión</h2>
+        <p>
+          Queremos fomentar el aprendizaje accesible y gratuito para todos los estudiantes,
+          ofreciendo materiales de calidad que impulsen su desarrollo académico y personal.
+        </p>
+      </div>
+      <div class="box" onclick="toggleBox(this)">
+        <h2>Nuestra Visión</h2>
+        <p>
+          Ser la plataforma educativa más confiable y accesible de la región, inspirando a jóvenes
+          y adultos a alcanzar sus metas y transformar su futuro mediante la educación.
+        </p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+
