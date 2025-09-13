@@ -7,10 +7,15 @@ Creemos en el poder de la educación para transformar vidas y construir un futur
 
 👩‍💻 Participantes
 Sasha Manihuari
+
 Zoila Cueva
+
 Yaiza Rojas
+
 Cielo
+
 akari
+
 🚀 Objetivo
 Impulsar espacios de aprendizaje accesibles e inclusivos, apoyando a jóvenes en su desarrollo académico y personal.
 
