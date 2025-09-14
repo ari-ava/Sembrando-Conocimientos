@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="foro.css">
+    <title>Foro</title>
+</head>
+<body>
+    <header>
+        <div class="botones">
+        <button><a href="">Inicio</a></button>
+        <button><a href="">mision</a></button>
+        <button><a href="">formulario</a></button>
+        <button><a href="">Calculadora</a></button>
+        <button><a href="">Foro</a></button>
+        </div>
+    </header>
+
+    <section class="Foro-1">
+        <h1>Bienvenido a nuestro Foro</h1>
+        <div class="intro-foro">
+            <p>¿Tienes dudas o quieres ayudar a alguien? Este foro es tu espacio para compartir, aprender y crecer juntos.
+                 Aquí niños y jóvenes encuentran apoyo mutuo, resuelven problemas y construyen conocimiento en equipo.
+                 ¡Participa, pregunta y colabora para que nadie enfrente sus retos solo!</p>
+        </div>
+        <div class="Foro-1-img">
+            <div class="card">
+                <img src="" alt="">
+                <p>Aprende</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <p>Participa</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <p>Ayuda</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Foro-2">
+        <h1>¡Bienvenidos al espacio donde juntos aprendemos y crecemos!</h1>
+
+        <div class="ejemplo-foro">
+          <p>Hola, que libros me recomendarían para estudiar química</p>
+          <p><span>Respuestas</span></p>
+          <span>Usuario1:</span>
+          <p>Hola, te recomendaría el libro de química Chang 7ma edición</p>
+          <span>Usuario2:</span>
+          <p>Hola, te recomiendo el libro Brown 9na edición</p>
+        </div>
+        
+         <div id="nuevoMensaje">
+        <input type="text" id="mensajeInput" placeholder="Escribe tu mensaje aquí">
+        <button class="btn" onclick="publicarMensaje()">Publicar</button>
+
+        <div id="foro"></div>
+
+  <script>
+    function publicarMensaje() {
+      const texto = document.getElementById("mensajeInput").value.trim();
+      if (texto === "") return;
+
+      const foro = document.getElementById("foro");
+
+      // Crear contenedor del mensaje
+      const mensajeDiv = document.createElement("div");
+      mensajeDiv.className = "mensaje";
+
+      const contenido = document.createElement("p");
+      contenido.textContent = texto;
+
+      const responderBtn = document.createElement("button");
+      responderBtn.textContent = "Responder";
+      responderBtn.className = "btn";
+      responderBtn.onclick = () => {
+        respuestasDiv.style.display = (respuestasDiv.style.display === "none") ? "block" : "none";
+      };
+
+      // Contenedor de respuestas
+      const respuestasDiv = document.createElement("div");
+      respuestasDiv.className = "respuestas";
+
+      const respuestaInput = document.createElement("input");
+      respuestaInput.type = "text";
+      respuestaInput.placeholder = "Escribe una respuesta";
+
+      const enviarRespuestaBtn = document.createElement("button");
+      enviarRespuestaBtn.textContent = "Enviar";
+      enviarRespuestaBtn.className = "btn";
+      enviarRespuestaBtn.onclick = () => {
+        const textoRespuesta = respuestaInput.value.trim();
+        if (textoRespuesta === "") return;
+
+        const respuesta = document.createElement("div");
+        respuesta.className = "respuesta";
+        respuesta.textContent = textoRespuesta;
+
+        respuestasDiv.appendChild(respuesta);
+        respuestaInput.value = "";
+      };
+
+      respuestasDiv.appendChild(respuestaInput);
+      respuestasDiv.appendChild(enviarRespuestaBtn);
+
+      // Estructura del mensaje completo
+      mensajeDiv.appendChild(contenido);
+      mensajeDiv.appendChild(responderBtn);
+      mensajeDiv.appendChild(respuestasDiv);
+
+      foro.appendChild(mensajeDiv);
+
+      // Limpiar input
+      document.getElementById("mensajeInput").value = "";
+    }
+    
+  </script>
+  </div>
+    </section>
+
+    <section class="Foro-3">
+     <h2>Temas destacados:</h2>
+     <ul>
+        <li><a href="#">Libros para aprender álgebra</a></li>
+        <li><a href="#">Libros de física</a></li>
+        <li><a href="#">Recomendaciones de webs para aprender matemáticas</a></li>
+        <li><a href="#">Plataformas digitales para aprender idiomas</a></li>
+     </ul>
+    </section>
+
+    <footer>
+     <p>Instagram:</p><a href="#">Sembrando_Conocimientos</a>
+     <p>Facebook:</p><a href="#">SembrandoConocimentos</a>
+    </footer> 
+</body>
+</html>
