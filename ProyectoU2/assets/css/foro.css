@@ -1,7 +1,7 @@
 header{
    height:40px; 
    width:100%;
-   background-color:rgb(93, 93, 93);
+   background-color:rgb(222, 4, 4);
 
 }
 header .botones{
@@ -17,6 +17,10 @@ header .botones{
 }
 button a{
     text-decoration: none;
+}
+.Foro-1{
+    width:100%;
+    height:1hv;
 }
 .Foro-1-img{
     display: flex;

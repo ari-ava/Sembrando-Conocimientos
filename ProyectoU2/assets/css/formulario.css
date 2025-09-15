@@ -1,0 +1,347 @@
+/*CONTACTANOS*/
+*{
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+}
+/*CABECERA DE TODAS LAS PÁGINAS*/
+.cabecera{
+    height: 80px;
+    width:100%;
+    background:#5AA9E6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px 30px 20px 30px;
+   /*padding-bottom:10px;*/
+}
+.logo p{
+    font-family:"Berkshire Swash",sans-serif;
+    font-weight:500 ;
+    font-size: 40px;         
+    color: #ffffff;              
+    letter-spacing: 1px;       
+    margin: 0;               
+    padding: 0;                
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.opciones button{
+    height:40px;
+    width:100px;
+    background-color: #7FC8F8;
+    border-radius:15px;
+    border:none;
+}
+.opciones a{
+    text-decoration:none;
+    color: #fbfbfb;
+}
+.opciones button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.opciones{
+    display: flex;
+    flex-direction:row;
+    gap:10px;
+    padding-bottom: 5px;
+
+}
+/*FINAL DE CABECERA*/
+/*Si es que despues hay algun error borrar esto*/
+#contactanos1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/**/
+
+#contactanos1 h1{
+    text-align: center;
+    font-family:popins,sans-serif;
+}
+#contactanos1 .intro-contactanos{
+    margin: auto;
+}
+.intro-contactanos{
+   background-color: #FFE45E;
+   height:120px;
+   width: 1100px;
+   text-align: center;
+   padding: 10px;
+}
+/*parte de las card de contáctanos*/
+.intro-contactanos-img{
+    width:100% ;
+    height:300px;
+    margin-top: 20px;
+    background-color:white;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.card{
+    width:250px ;
+    height:250px ;
+    margin-top:20px;
+    background-color: rgb(176, 170, 170);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img-card{
+    width: 250px ;
+    height: 220px;
+}
+.card p{
+    text-align: center;
+    padding: auto;
+}
+/*parte final de las card de contáctanos*/
+
+/*CONTACTANOS 2*/
+#contactanos2{
+  background-color: #fbfbfb;
+}
+.contactanos-h2{
+   background:#5AA9E6;
+   width:100% ;
+   height:60px;
+   text-align: center;
+}
+/*FORMULARIO*/
+.form{
+  display: flex;
+  justify-content:space-around ;
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-top: 25px;
+}
+.envoltura-form {
+  background-color: #FF6392;
+  height: 450px;
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.envoltura-form form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.envoltura-form form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.envoltura-form form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.envoltura-form form input {
+  padding: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.envoltura-form form input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.envoltura-form form button {
+  background-color: #fbfbfb;
+  color: #FF6392;
+  border: none;
+  padding: 12px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width:100%;
+  height:35px;
+  margin-top:50px;
+
+}
+
+.envoltura-form form button:hover {
+  background-color: #ff639252;
+  color: #fbfbfb;
+  
+}
+
+.envoltura-form form p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.envoltura-form form a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+
+/*Parte de la imagen del costado del formulario*/
+.form img{
+  height: 450px;
+  width: 380px;
+  border-radius:20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+/*testimonios*/
+#testimonios{
+  margin-top:30px;
+  margin-bottom: 0%;
+
+}
+#testimonios h2{
+  background-color: #5AA9E6;
+  width:100%;
+  height:50px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 3px;
+  margin: 0;
+}
+.contenedor-testimonios{
+ background-color:gray;
+ width:100%;
+ height:350px;
+ display: flex;
+ flex-direction:row;
+ justify-content: space-around;
+}
+.card2{
+ width:220px;
+ height:250px;
+ background-color: #fbfbfb;
+ margin-top:40px;
+ padding: 5px;
+ border-radius:20px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.card2 img{
+ width:100px;
+ height:100px;
+border-radius: 50%;
+
+ object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+/*footer*/
+footer {
+    background-color:#5AA9E6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.contenido-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height:30px; 
+}
+
+.redes-sociales {
+    text-align: left;
+     margin-bottom:2px;
+}
+.redes-sociales  p{
+    color: #fbfbfb;
+    margin:5px;
+}
+.redes-sociales  a{
+    color: #fbfbfb;
+    text-decoration: none;
+}
+
+
+.derechos {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+}
+/*final del footer*/
+
+@media screen and (max-width: 768px){
+    /*para todas las paginas*/
+    .cabecera{
+    display: flex;
+    flex-direction: column;
+    justify-content:column ;
+    background-color: #5AA9E6;
+    height:140px;
+  }
+  .logo{
+    text-align: center;
+  }
+  .opciones{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    justify-content: space-around;
+  }
+  .opciones button{
+    height: 20px;
+    width:100px;
+  }
+  .cabecera-exposiciones input{
+    height: 30px;
+    border-radius: 30px;
+    width:230px;
+  }
+  .cabecera-exposiciones button{
+    border-radius:30px;
+    height:30px;
+    width:100px;
+    background-color: #5AA9E6;
+    color: rgb(255, 255, 255);
+  }
+   /*Espacio para el resto de los elementos*/
+  .intro-contactanos{
+    width:340px;
+   height:260px;
+   padding-bottom:18px;
+   padding-left:18px;
+  }
+  .intro-contactanos-img{
+       display: grid; 
+       grid-template-columns:1/6;
+     }
+     .card{
+       grid-column:2/5;
+     }
+    /**/
+  .redes-sociales p{
+       font-size:0.95em; 
+     }
+     .contenido-footer{
+      margin-bottom:20px ;
+     }
+  }
