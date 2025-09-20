@@ -1,39 +1,142 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f7fc;
+.unique-header {
+  background: linear-gradient(270deg, var(--orange-1), var(--orange-2), var(--orange-3));
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar {
-  background: linear-gradient(90deg, #6d28d9, #9333ea);
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.nav-link {
+
+.nav-menu .nav-link {
+  margin: 0 12px;
   color: #fff;
+  text-decoration: none;
+  position: relative;
   font-weight: 500;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 }
-.nav-link:hover {
-  color: #ffd700;
+.nav-menu .nav-link:hover {
+  color: #000;
+}
+.nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+.nav-menu .nav-link:hover::after {
+  width: 100%;
 }
 
-.section-title {
-  text-align: center;
-  margin: 4rem 0 2rem;
-  font-weight: bold;
-  color: #6d28d9;
+.menu-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
 }
 
-.mission-title {
-  color: #6d28d9;
-}
-.vision-title {
-  color: #9333ea;
+:root {
+  --orange-1: #FFB74D; /* Durazno */
+  --orange-2: #FF8A65; /* Coral suave */
+  --orange-3: #FFD54F; /* Amarillo cálido */
 }
 
-footer {
-  background: #6d28d9;
-  color: white;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 3rem;
+.bg-orange {
+  background: linear-gradient(90deg, var(--orange-1), var(--orange-2));
+}
+
+.text-orange {
+  color: var(--orange-2);
+}
+
+.btn-orange {
+  background-color: var(--orange-1);
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+.btn-orange:hover {
+  background-color: var(--orange-2);
+  transform: scale(1.05);
+}
+
+/* Tarjetas */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Imágenes siempre responsivas */
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--orange-2);
+}
+.timeline-item {
+  margin: 20px 0;
+  position: relative;
+  padding-left: 25px;
+  opacity: 0; /* oculto al inicio */
+  transform: translateX(-20px);
+  transition: all 0.8s ease;
+}
+.timeline-item::before {
+  content: "●";
+  position: absolute;
+  left: -2px;
+  color: var(--orange-3);
+  font-size: 20px;
+}
+
+/* Planes */
+.plan-card {
+  border-top: 5px solid var(--orange-3);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* oculto al inicio */
+  transform: translateY(30px);
+}
+.plan-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto dinámico al mostrar texto */
+.hidden-text {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+  font-style: italic;
 }
