@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/foro.css">
+    <link rel="stylesheet" href="/assets/css/foro.css">
     <title>Foro</title>
 </head>
 <body>
     <header>
         <div class="botones">
-        <button><a href="">Inicio</a></button>
-        <button><a href="">mision</a></button>
-        <button><a href="">formulario</a></button>
-        <button><a href="">Calculadora</a></button>
-        <button><a href="">Foro</a></button>
+            <button><a href="">Inicio</a></button>
+            <button><a href="">Misión</a></button>
+            <button><a href="">Formulario</a></button>
+            <button><a href="">Calculadora</a></button>
+            <button><a href="">Foro</a></button>
         </div>
     </header>
 
@@ -21,118 +21,156 @@
         <h1>Bienvenido a nuestro Foro</h1>
         <div class="intro-foro">
             <p>¿Tienes dudas o quieres ayudar a alguien? Este foro es tu espacio para compartir, aprender y crecer juntos.
-                 Aquí niños y jóvenes encuentran apoyo mutuo, resuelven problemas y construyen conocimiento en equipo.
-                 ¡Participa, pregunta y colabora para que nadie enfrente sus retos solo!</p>
+                Aquí niños y jóvenes encuentran apoyo mutuo, resuelven problemas y construyen conocimiento en equipo.
+                ¡Participa, pregunta y colabora para que nadie enfrente sus retos solo!</p>
         </div>
         <div class="Foro-1-img">
             <div class="card">
-                <img src="" alt="">
-                <p>Aprende</p>
+                <p>📘 Aprende</p>
             </div>
             <div class="card">
-                <img src="" alt="">
-                <p>Participa</p>
+                <p>💬 Participa</p>
             </div>
             <div class="card">
-                <img src="" alt="">
-                <p>Ayuda</p>
+                <p>🤝 Ayuda</p>
             </div>
         </div>
     </section>
 
     <section class="Foro-2">
-        <h1>¡Bienvenidos al espacio donde juntos aprendemos y crecemos!</h1>
+        <h1>¡Elige una materia y empieza a interactuar!</h1>
 
+        <!-- Filtro de materias -->
+        <div class="materias">
+            <button onclick="filtrarMateria('Comunicación')">Comunicación</button>
+            <button onclick="filtrarMateria('Finanzas')">Finanzas</button>
+            <button onclick="filtrarMateria('Arte')">Arte</button>
+            <button onclick="filtrarMateria('Matemática')">Matemática</button>
+            <button onclick="filtrarMateria('Ciencias')">Ciencias</button>
+            <button onclick="filtrarMateria('Tecnología')">Tecnología</button>
+        </div>
+
+        <!-- Ejemplo inicial -->
         <div class="ejemplo-foro">
-          <p>Hola, que libros me recomendarían para estudiar química</p>
-          <p><span>Respuestas</span></p>
-          <span>Usuario1:</span>
-          <p>Hola, te recomendaría el libro de química Chang 7ma edición</p>
-          <span>Usuario2:</span>
-          <p>Hola, te recomiendo el libro Brown 9na edición</p>
+            <p><b>Pregunta:</b> Hola, ¿qué libros me recomendarían para estudiar química?</p>
+            <p><span>Respuestas:</span></p>
+            <span>👤 Usuario1:</span>
+            <p>Hola, te recomendaría el libro de química Chang 7ma edición</p>
+            <span>👤 Usuario2:</span>
+            <p>Te recomiendo el libro Brown 9na edición</p>
         </div>
         
-         <div id="nuevoMensaje">
-        <input type="text" id="mensajeInput" placeholder="Escribe tu mensaje aquí">
-        <button class="btn" onclick="publicarMensaje()">Publicar</button>
+        <!-- Publicar mensajes -->
+        <div id="nuevoMensaje">
+            <input type="text" id="mensajeInput" placeholder="Escribe tu mensaje aquí">
+            <select id="materiaSelect">
+                <option value="">Selecciona materia</option>
+                <option value="Comunicación">Comunicación</option>
+                <option value="Finanzas">Finanzas</option>
+                <option value="Arte">Arte</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Ciencias">Ciencias</option>
+                <option value="Tecnología">Tecnología</option>
+            </select>
+            <button class="btn" onclick="publicarMensaje()">Publicar</button>
 
-        <div id="foro"></div>
+            <div id="foro"></div>
+        </div>
 
-  <script>
-    function publicarMensaje() {
-      const texto = document.getElementById("mensajeInput").value.trim();
-      if (texto === "") return;
+        <script>
+            function publicarMensaje() {
+                const texto = document.getElementById("mensajeInput").value.trim();
+                const materia = document.getElementById("materiaSelect").value;
 
-      const foro = document.getElementById("foro");
+                if (texto === "" || materia === "") {
+                    alert("Por favor escribe un mensaje y selecciona una materia");
+                    return;
+                }
 
-      // Crear contenedor del mensaje
-      const mensajeDiv = document.createElement("div");
-      mensajeDiv.className = "mensaje";
+                const foro = document.getElementById("foro");
 
-      const contenido = document.createElement("p");
-      contenido.textContent = texto;
+                // Crear contenedor del mensaje
+                const mensajeDiv = document.createElement("div");
+                mensajeDiv.className = "mensaje";
+                mensajeDiv.setAttribute("data-materia", materia);
 
-      const responderBtn = document.createElement("button");
-      responderBtn.textContent = "Responder";
-      responderBtn.className = "btn";
-      responderBtn.onclick = () => {
-        respuestasDiv.style.display = (respuestasDiv.style.display === "none") ? "block" : "none";
-      };
+                const contenido = document.createElement("p");
+                contenido.innerHTML = `<b>${materia}:</b> ${texto}`;
 
-      // Contenedor de respuestas
-      const respuestasDiv = document.createElement("div");
-      respuestasDiv.className = "respuestas";
+                // Botón responder
+                const responderBtn = document.createElement("button");
+                responderBtn.textContent = "Responder";
+                responderBtn.className = "btn";
 
-      const respuestaInput = document.createElement("input");
-      respuestaInput.type = "text";
-      respuestaInput.placeholder = "Escribe una respuesta";
+                // Contenedor de respuestas
+                const respuestasDiv = document.createElement("div");
+                respuestasDiv.className = "respuestas";
 
-      const enviarRespuestaBtn = document.createElement("button");
-      enviarRespuestaBtn.textContent = "Enviar";
-      enviarRespuestaBtn.className = "btn";
-      enviarRespuestaBtn.onclick = () => {
-        const textoRespuesta = respuestaInput.value.trim();
-        if (textoRespuesta === "") return;
+                const respuestaInput = document.createElement("input");
+                respuestaInput.type = "text";
+                respuestaInput.placeholder = "Escribe una respuesta";
 
-        const respuesta = document.createElement("div");
-        respuesta.className = "respuesta";
-        respuesta.textContent = textoRespuesta;
+                const enviarRespuestaBtn = document.createElement("button");
+                enviarRespuestaBtn.textContent = "Enviar";
+                enviarRespuestaBtn.className = "btn";
+                enviarRespuestaBtn.onclick = () => {
+                    const textoRespuesta = respuestaInput.value.trim();
+                    if (textoRespuesta === "") return;
 
-        respuestasDiv.appendChild(respuesta);
-        respuestaInput.value = "";
-      };
+                    const respuesta = document.createElement("div");
+                    respuesta.className = "respuesta";
+                    respuesta.textContent = textoRespuesta;
 
-      respuestasDiv.appendChild(respuestaInput);
-      respuestasDiv.appendChild(enviarRespuestaBtn);
+                    respuestasDiv.appendChild(respuesta);
+                    respuestaInput.value = "";
+                };
 
-      // Estructura del mensaje completo
-      mensajeDiv.appendChild(contenido);
-      mensajeDiv.appendChild(responderBtn);
-      mensajeDiv.appendChild(respuestasDiv);
+                respuestasDiv.appendChild(respuestaInput);
+                respuestasDiv.appendChild(enviarRespuestaBtn);
 
-      foro.appendChild(mensajeDiv);
+                responderBtn.onclick = () => {
+                    respuestasDiv.style.display = (respuestasDiv.style.display === "none" || respuestasDiv.style.display === "") 
+                        ? "block" : "none";
+                };
 
-      // Limpiar input
-      document.getElementById("mensajeInput").value = "";
-    }
-    
-  </script>
-  </div>
+                // Estructura del mensaje completo
+                mensajeDiv.appendChild(contenido);
+                mensajeDiv.appendChild(responderBtn);
+                mensajeDiv.appendChild(respuestasDiv);
+
+                foro.appendChild(mensajeDiv);
+
+                // Limpiar input
+                document.getElementById("mensajeInput").value = "";
+                document.getElementById("materiaSelect").value = "";
+            }
+
+            function filtrarMateria(materia) {
+                const mensajes = document.querySelectorAll("#foro .mensaje");
+                mensajes.forEach(m => {
+                    if (m.getAttribute("data-materia") === materia || materia === "Todos") {
+                        m.style.display = "block";
+                    } else {
+                        m.style.display = "none";
+                    }
+                });
+            }
+        </script>
     </section>
 
     <section class="Foro-3">
-     <h2>Temas destacados:</h2>
-     <ul>
-        <li><a href="#">Libros para aprender álgebra</a></li>
-        <li><a href="#">Libros de física</a></li>
-        <li><a href="#">Recomendaciones de webs para aprender matemáticas</a></li>
-        <li><a href="#">Plataformas digitales para aprender idiomas</a></li>
-     </ul>
+        <h2>Temas destacados:</h2>
+        <ul>
+            <li><a href="#">Libros para aprender álgebra</a></li>
+            <li><a href="#">Libros de física</a></li>
+            <li><a href="#">Recomendaciones de webs para aprender matemáticas</a></li>
+            <li><a href="#">Plataformas digitales para aprender idiomas</a></li>
+        </ul>
     </section>
 
     <footer>
-     <p>Instagram:</p><a href="#">Sembrando_Conocimientos</a>
-     <p>Facebook:</p><a href="#">SembrandoConocimentos</a>
-    </footer> 
+        <p>Instagram:</p><a href="#">Sembrando_Conocimientos</a>
+        <p>Facebook:</p><a href="#">SembrandoConocimentos</a>
+    </footer>
 </body>
 </html>
