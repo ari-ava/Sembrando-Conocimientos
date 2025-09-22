@@ -1,347 +1,220 @@
-/*CONTACTANOS*/
-*{
-    box-sizing: border-box;
-}
-html{
-    margin: 0;
-}
-/*CABECERA DE TODAS LAS PÁGINAS*/
-.cabecera{
-    height: 80px;
-    width:100%;
-    background:#5AA9E6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding:20px 30px 20px 30px;
-   /*padding-bottom:10px;*/
-}
-.logo p{
-    font-family:"Berkshire Swash",sans-serif;
-    font-weight:500 ;
-    font-size: 40px;         
-    color: #ffffff;              
-    letter-spacing: 1px;       
-    margin: 0;               
-    padding: 0;                
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
-}
-
-.opciones button{
-    height:40px;
-    width:100px;
-    background-color: #7FC8F8;
-    border-radius:15px;
-    border:none;
-}
-.opciones a{
-    text-decoration:none;
-    color: #fbfbfb;
-}
-.opciones button:hover{
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-}
-
-.opciones{
-    display: flex;
-    flex-direction:row;
-    gap:10px;
-    padding-bottom: 5px;
-
-}
-/*FINAL DE CABECERA*/
-/*Si es que despues hay algun error borrar esto*/
-#contactanos1{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-/**/
-
-#contactanos1 h1{
-    text-align: center;
-    font-family:popins,sans-serif;
-}
-#contactanos1 .intro-contactanos{
-    margin: auto;
-}
-.intro-contactanos{
-   background-color: #FFE45E;
-   height:120px;
-   width: 1100px;
-   text-align: center;
-   padding: 10px;
-}
-/*parte de las card de contáctanos*/
-.intro-contactanos-img{
-    width:100% ;
-    height:300px;
-    margin-top: 20px;
-    background-color:white;
-    display: flex;
-    flex-direction:row;
-    justify-content:space-around;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-.card{
-    width:250px ;
-    height:250px ;
-    margin-top:20px;
-    background-color: rgb(176, 170, 170);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.img-card{
-    width: 250px ;
-    height: 220px;
-}
-.card p{
-    text-align: center;
-    padding: auto;
-}
-/*parte final de las card de contáctanos*/
-
-/*CONTACTANOS 2*/
-#contactanos2{
-  background-color: #fbfbfb;
-}
-.contactanos-h2{
-   background:#5AA9E6;
-   width:100% ;
-   height:60px;
-   text-align: center;
-}
-/*FORMULARIO*/
-.form{
-  display: flex;
-  justify-content:space-around ;
-  padding-left: 170px;
-  padding-right: 170px;
-  padding-top: 25px;
-}
-.envoltura-form {
-  background-color: #FF6392;
-  height: 450px;
-  width: 380px;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  padding: 30px 25px;
+/* Reset general */
+* {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff0f6, #ffe4f1);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* ==============================
+   CABECERA
+============================== */
+.cabecera {
+  height: 85px;
+  width: 100%;
+  background: linear-gradient(90deg, #f9a8d4, #ec4899);
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 0.6s ease-out;
 }
 
-.envoltura-form form h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.envoltura-form form div {
+.logo {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
+  align-items: center;
+  gap: 12px;
 }
 
-.envoltura-form form label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 14px;
+.logo img {
+  height: 55px;
+  width: auto;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
-.envoltura-form form input {
-  padding: 10px;
+.logo p {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 34px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+}
+
+.opciones {
+  display: flex;
+  gap: 14px;
+}
+
+.opciones a {
+  text-decoration: none;
+}
+
+.opciones button {
+  padding: 10px 20px;
+  background: #f472b6;
+  border-radius: 30px;
   border: none;
-  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.envoltura-form form input:focus {
+.opciones button:hover {
+  background: #db2777;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   FORMULARIO DE INSCRIPCIÓN
+============================== */
+.form-card {
+  max-width: 750px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 35px;
+  padding: 2.5rem;
+  border: 2px solid #fbcfe8;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+}
+
+.form-card h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #be185d;
+  margin-bottom: 0.6rem;
+}
+
+.form-card p {
+  color: #6b7280;
+  margin-bottom: 1.8rem;
+}
+
+.form-card label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #831843;
+}
+
+.form-card input,
+.form-card select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 25px;
+  border: 1px solid #f9a8d4;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+  border-color: #ec4899;
+  box-shadow: 0 0 0 4px rgba(236,72,153,0.25);
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-.envoltura-form form button {
-  background-color: #fbfbfb;
-  color: #FF6392;
+.form-card button {
+  background: linear-gradient(90deg, #ec4899, #db2777);
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 2.2rem;
   border: none;
-  padding: 12px;
   border-radius: 40px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  width:100%;
-  height:35px;
-  margin-top:50px;
-
+  transition: all 0.3s ease;
 }
 
-.envoltura-form form button:hover {
-  background-color: #ff639252;
-  color: #fbfbfb;
-  
+.form-card button:hover {
+  background: linear-gradient(90deg, #db2777, #9d174d);
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-.envoltura-form form p {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
+/* ==============================
+   COMPROBANTE
+============================== */
+#comprobante {
+  margin-top: 2rem;
+  background: #fdf2f8;
+  border: 3px solid #f472b6;
+  border-radius: 30px;
+  padding: 2rem;
+  display: none;
+  animation: fadeIn 0.6s ease forwards;
 }
 
-.envoltura-form form a {
-  color: #fff;
-  text-decoration: underline;
-  margin-left: 5px;
+#comprobante h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9d174d;
+  margin-bottom: 1rem;
 }
 
+#comprobante p {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
 
-/*Parte de la imagen del costado del formulario*/
-.form img{
-  height: 450px;
-  width: 380px;
-  border-radius:20px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-}
-/*testimonios*/
-#testimonios{
-  margin-top:30px;
-  margin-bottom: 0%;
-
-}
-#testimonios h2{
-  background-color: #5AA9E6;
-  width:100%;
-  height:50px;
-  text-align: center;
-  padding-top: 7px;
-  padding-bottom: 3px;
-  margin: 0;
-}
-.contenedor-testimonios{
- background-color:gray;
- width:100%;
- height:350px;
- display: flex;
- flex-direction:row;
- justify-content: space-around;
-}
-.card2{
- width:220px;
- height:250px;
- background-color: #fbfbfb;
- margin-top:40px;
- padding: 5px;
- border-radius:20px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-}
-.card2 img{
- width:100px;
- height:100px;
-border-radius: 50%;
-
- object-fit: cover;
-  display: block;
-  margin: 0 auto 10px;
-}
-/*footer*/
-footer {
-    background-color:#5AA9E6;
-    padding: 10px;
-    display: flex;
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .cabecera {
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    
-}
-
-.contenido-footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    height:30px; 
-}
-
-.redes-sociales {
-    text-align: left;
-     margin-bottom:2px;
-}
-.redes-sociales  p{
-    color: #fbfbfb;
-    margin:5px;
-}
-.redes-sociales  a{
-    color: #fbfbfb;
-    text-decoration: none;
-}
-
-
-.derechos {
+    height: auto;
+    padding: 20px;
     text-align: center;
-    font-size: 14px;
-    color: #ffffff;
-}
-/*final del footer*/
+    border-radius: 0 0 20px 20px;
+  }
 
-@media screen and (max-width: 768px){
-    /*para todas las paginas*/
-    .cabecera{
-    display: flex;
-    flex-direction: column;
-    justify-content:column ;
-    background-color: #5AA9E6;
-    height:140px;
+  .opciones {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
   }
-  .logo{
-    text-align: center;
+
+  .form-card {
+    margin: 1.5rem;
+    padding: 1.5rem;
   }
-  .opciones{
-    display: grid;
-    grid-template-columns:auto auto auto;
-    justify-content: space-around;
-  }
-  .opciones button{
-    height: 20px;
-    width:100px;
-  }
-  .cabecera-exposiciones input{
-    height: 30px;
-    border-radius: 30px;
-    width:230px;
-  }
-  .cabecera-exposiciones button{
-    border-radius:30px;
-    height:30px;
-    width:100px;
-    background-color: #5AA9E6;
-    color: rgb(255, 255, 255);
-  }
-   /*Espacio para el resto de los elementos*/
-  .intro-contactanos{
-    width:340px;
-   height:260px;
-   padding-bottom:18px;
-   padding-left:18px;
-  }
-  .intro-contactanos-img{
-       display: grid; 
-       grid-template-columns:1/6;
-     }
-     .card{
-       grid-column:2/5;
-     }
-    /**/
-  .redes-sociales p{
-       font-size:0.95em; 
-     }
-     .contenido-footer{
-      margin-bottom:20px ;
-     }
-  }
+}
+
+/* ==============================
+   ANIMACIONES
+============================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
