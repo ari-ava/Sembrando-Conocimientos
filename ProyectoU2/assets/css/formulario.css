@@ -1,220 +1,122 @@
-/* Reset general */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #fff0f6, #ffe4f1);
-  color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ==============================
-   CABECERA
-============================== */
-.cabecera {
-  height: 85px;
-  width: 100%;
-  background: linear-gradient(90deg, #f9a8d4, #ec4899);
+header {
+  background: linear-gradient(270deg, #ff9f43, #e67e22, #d35400);
+  background-size: 600% 600%;
+  animation: moverFondo 10s ease infinite;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   position: sticky;
   top: 0;
-  z-index: 100;
-  animation: slideDown 0.6s ease-out;
+  z-index: 10;
 }
 
-.logo {
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.logo img {
-  height: 55px;
-  width: auto;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+header .logo img {
+  height: 65px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
-.logo p {
-  font-family: "Berkshire Swash", cursive;
-  font-size: 34px;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
-}
-
-.opciones {
+nav ul {
   display: flex;
-  gap: 14px;
+  list-style: none;
+  gap: 1rem;
 }
 
-.opciones a {
+nav a {
   text-decoration: none;
-}
-
-.opciones button {
-  padding: 10px 20px;
-  background: #f472b6;
-  border-radius: 30px;
-  border: none;
-  color: #fff;
+  color: white;
   font-weight: 600;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.opciones button:hover {
-  background: #db2777;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+nav a:hover {
+  color: #ffdd59;
+  text-shadow: 0 0 5px rgba(255,255,255,0.7);
 }
-
-/* ==============================
-   FORMULARIO DE INSCRIPCIÓN
-============================== */
-.form-card {
-  max-width: 750px;
+/* Contenedor principal */
+.form-container {
+  max-width: 600px;
   margin: 3rem auto;
-  background: #fff;
-  border-radius: 35px;
-  padding: 2.5rem;
-  border: 2px solid #fbcfe8;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.8s ease forwards;
+  padding: 2rem;
+  background: #fff7f0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in;
 }
 
-.form-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+.form-container h1 {
+  color: #d35400;
+  margin-bottom: 0.5rem;
 }
 
-.form-card h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #be185d;
-  margin-bottom: 0.6rem;
+.form-container p {
+  margin-bottom: 1.5rem;
+  color: #555;
 }
 
-.form-card p {
-  color: #6b7280;
-  margin-bottom: 1.8rem;
+/* Inputs y labels */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
 }
 
-.form-card label {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: #831843;
+label {
+  font-weight: bold;
+  color: #333;
 }
 
-.form-card input,
-.form-card select {
+input, textarea {
+  padding: 0.7rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
   width: 100%;
-  padding: 1rem;
-  border-radius: 25px;
-  border: 1px solid #f9a8d4;
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-card input:focus,
-.form-card select:focus {
-  border-color: #ec4899;
-  box-shadow: 0 0 0 4px rgba(236,72,153,0.25);
+/* Estados */
+input:focus, textarea:focus {
+  border-color: #ff9f43;
   outline: none;
 }
 
-.form-card button {
-  background: linear-gradient(90deg, #ec4899, #db2777);
-  color: #fff;
-  font-weight: 700;
-  padding: 1rem 2.2rem;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+input.error-border, textarea.error-border {
+  border-color: red;
+  animation: shake 0.3s ease;
 }
 
-.form-card button:hover {
-  background: linear-gradient(90deg, #db2777, #9d174d);
-  transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+input.success-border, textarea.success-border {
+  border-color: green;
 }
 
-/* ==============================
-   COMPROBANTE
-============================== */
-#comprobante {
-  margin-top: 2rem;
-  background: #fdf2f8;
-  border: 3px solid #f472b6;
-  border-radius: 30px;
-  padding: 2rem;
+/* Errores */
+.error {
+  color: red;
+  font-size: 0.85rem;
   display: none;
-  animation: fadeIn 0.6s ease forwards;
+  margin-top: -0.5rem;
+  animation: fadeIn 0.4s ease;
 }
 
-#comprobante h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #9d174d;
-  margin-bottom: 1rem;
-}
-
-#comprobante p {
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-  font-size: 0.95rem;
-}
-
-/* ==============================
-   RESPONSIVE
-============================== */
-@media (max-width: 768px) {
-  .cabecera {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-  }
-
-  .opciones {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .form-card {
-    margin: 1.5rem;
-    padding: 1.5rem;
-  }
-}
-
-/* ==============================
-   ANIMACIONES
-============================== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
