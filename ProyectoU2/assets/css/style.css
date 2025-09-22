@@ -1,133 +1,115 @@
-/* =======================
-   ESTILOS GENERALES
-======================= */
+:root {
+  --naranja-fondo: #ffe5cc; 
+  --naranja-principal: #e67e22;
+  --naranja-oscuro: #d35400;
+  --texto: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff6fb;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  background: var(--naranja-fondo);
+  color: var(--texto);
+  line-height: 1.6;
 }
 
-/* Encabezado */
 header {
-    background: linear-gradient(135deg, #ffb6d5, #ff69b4);
-    border-bottom: 3px solid #ff4d94;
-}
-header h1 {
-    font-weight: bold;
-    color: #a0005a;
-}
-header p {
-    max-width: 800px;
-    margin: auto;
-    color: #7a0044;
-}
-
-/* Sección Objetivos */
-section ul.list-group li {
-    background-color: #ffe6f2;
-    border: none;
-    padding: 12px;
-    font-size: 1.05rem;
-    border-left: 4px solid #ff69b4;
-}
-section h2 {
-    color: #a0005a;
-    font-weight: bold;
+  background: linear-gradient(270deg, #ff9f43, #e67e22, #d35400);
+  background-size: 600% 600%;
+  animation: moverFondo 10s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-/* =======================
-   TARJETAS FUNDADORAS
-======================= */
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+@keyframes moverFondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.box {
-    width: 260px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+header .logo img {
+  height: 65px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
-.box h3 {
-    color: #a0005a;
-    font-size: 1.4rem;
-    margin-top: 10px;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
 }
 
-.box p {
-    font-size: 0.95rem;
-    color: #444;
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.box .imagen {
-    background-color: #ffb6d5;
-    height: 150px;
-    border-radius: 15px 15px 0 0;
+nav a:hover {
+  color: #ffdd59;
+  text-shadow: 0 0 5px rgba(255,255,255,0.7);
 }
 
-/* Botón */
-.boton {
-    background-color: #ff69b4;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-}
-.boton:hover {
-    background-color: #d94d96;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 70vh;
 }
 
-/* =======================
-   FORMULARIO DE CONTACTO
-======================= */
-section.bg-light {
-    background-color: #ffe6f2 !important;
+.hero .contenedor {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 700px;
 }
 
-form label {
-    font-weight: 500;
-    color: #7a0044;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-form .form-control {
-    border-radius: 10px;
-    border: 1px solid #ffb6d5;
+.hero span {
+  color: var(--naranja-principal);
 }
 
-form button {
-    background-color: #ff69b4;
-    border: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-form button:hover {
-    background-color: #d94d96;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* =======================
-   FOOTER
-======================= */
 footer {
-    font-size: 0.9rem;}
-
-img {
-    background-image: url("assets/css/logo/logito/ChatGPT Image 15 ago 2025, 08_12_21 p.m..png");
-    background:content-box;
-    background-repeat: no-repeat;
-    height: 400px;
-    width:  400px;
-    color: #ff69b4;
+  text-align: center;
+  padding: 1rem;
+  background: var(--naranja-principal);
+  color: white;
+  margin-top: 3rem;
+  border-radius: 20px 20px 0 0;
+  font-weight: 500;
 }
